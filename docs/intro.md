@@ -18,7 +18,7 @@ To get started with the ZipTeams API, you'll need to:
 
 ZipTeams offers the following APIs:
 
-- [Partner APIs](/docs/partner-api/introduction) - APIs for partners to integrate with ZipTeams
+- [Partner APIs](/partner-api/introduction.md) - APIs for partners to integrate with ZipTeams
 
 ## Support
 

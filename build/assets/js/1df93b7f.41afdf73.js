@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkzipteams_api_docs=self.webpackChunkzipteams_api_docs||[]).push([[583],{6107:(s,e,t)=>{t.r(e),t.d(e,{default:()=>p});var a=t(6347),i=t(4848);function p(){return(0,i.jsx)(a.rd,{to:"/intro"})}}}]);
