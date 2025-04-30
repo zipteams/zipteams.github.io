@@ -10,7 +10,7 @@ const config: Config = {
   favicon: 'https://framerusercontent.com/images/I8rooDmB09vlY0QUiBCnpCyDY.png',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://zipteams.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -18,7 +18,9 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'zipteams', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  projectName: 'zipteams.github.io', // Usually your repo name.
+  trailingSlash: false,
+  deploymentBranch: 'docs',
 
   onBrokenLinks: 'warn', // Changed from 'throw' to 'warn' to allow the build to complete
   onBrokenMarkdownLinks: 'warn',
