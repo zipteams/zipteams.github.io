@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Partner API Documentation
 
-Welcome to the ZipTeams Partner API documentation. This comprehensive guide provides detailed information about the APIs available for partners to integrate with the ZipTeams platform. Our APIs are designed to be robust, secure, and easy to use, enabling seamless integration with your existing systems.
+Welcome to the Zipteams Partner API documentation. This comprehensive guide provides detailed information about the APIs available for partners to integrate with the Zipteams platform. Our APIs are designed to be robust, secure, and easy to use, enabling seamless integration with your existing systems.
 
 ## Host
 
