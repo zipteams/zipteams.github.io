@@ -18,7 +18,6 @@ For all endpoints, you need to provide the following headers unless specified ot
 
 - `x-api-key`: Provided API Key after onboarding (required)
 - `x-api-secret`: Provided API Secret after onboarding (required)
-- `x-partner-id`: Your unique partner identifier (required)
 - `x-tenant-id`: The tenant identifier (required)
 - `x-sub-tenant-id`: The sub-tenant identifier (required)
 
