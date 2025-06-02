@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkzipteams_api_docs=self.webpackChunkzipteams_api_docs||[]).push([[647],{7121:(e,s,a)=>{a.r(s),a.d(s,{default:()=>d});a(6540);var r=a(4164),c=a(5500),p=a(7559),t=a(2831),u=a(1656),i=a(4848);function d(e){return(0,i.jsx)(c.e3,{className:(0,r.A)(p.G.wrapper.docsPages),children:(0,i.jsx)(u.A,{children:(0,t.v)(e.route.routes)})})}}}]);
