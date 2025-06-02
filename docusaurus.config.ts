@@ -9,6 +9,9 @@ const config: Config = {
   tagline: 'All Conversations in One Place',
   favicon: 'https://framerusercontent.com/images/I8rooDmB09vlY0QUiBCnpCyDY.png',
 
+  // Disable image optimization for specific paths
+  staticDirectories: ['static', 'docs/dashboard'],
+
   // Set the production url of your site here
   url: 'https://zipteams.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -40,6 +43,10 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           routeBasePath: '/', // Set docs as the root
+          // Disable image optimization for all images in docs
+          remarkPlugins: [
+            [require('@docusaurus/remark-plugin-npm2yarn'), {sync: true}],
+          ],
         },
         blog: {
           showReadingTime: true,

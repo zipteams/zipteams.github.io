@@ -23,6 +23,14 @@ const sidebars: SidebarsConfig = {
         'partner-api/disposition-status-update',
       ],
     },
+    {
+      type: 'category',
+      label: 'Embeddable Components',
+      items: [
+        'dashboard/customer-insights',
+        'dashboard/auth-token',
+      ],
+    },
   ],
 };
 
