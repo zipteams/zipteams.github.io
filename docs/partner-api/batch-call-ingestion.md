@@ -131,12 +131,12 @@ The request body should be a JSON object with the following structure:
 
 **HTTP Status Code**: 400 Bad Request
 
-#### Missing Sub-Tenant ID
+#### Missing Subtenant ID
 
 ```json
 {
   "success": false,
-  "message": "Sub-Tenant ID is required"
+  "message": "Subtenant ID is required"
 }
 ```
 
@@ -191,7 +191,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'x-partner-id: 123' \
   -H 'x-tenant-id: tenant1' \
-  -H 'x-sub-tenant-id: subtenant1' \
+  -H 'x-subtenant-id: subtenant1' \
   -d '{
   "data": [
     {
@@ -364,6 +364,14 @@ Each object in the `quality` array contains:
 - The `call_id` field will always be present, but other fields may be null or empty depending on the analysis results.
 - The `meta` object contains the same metadata that was provided in the original request, allowing you to correlate the callback with your internal systems.
 - The callback URL must be publicly accessible and support HTTPS.
+
+### Analytics Data Options
+
+When using the `callback_url` feature, you have two options for displaying analytics data:
+
+1. **Custom UI Integration**: Use the analytics data received via the callback to display insights in your own user interface. This option provides maximum customization and seamless integration with your existing application.
+
+2. **Zipteams Dashboard**: Alternatively, you can omit the callback_url and use the [Zipteams Dashboard](/dashboard/customer-insights.md) to display analytics with minimal implementation effort. The dashboard provides a comprehensive, ready-to-use visualization of all your data and AI analysis outputs.
 
 ## Technical Notes
 

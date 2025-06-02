@@ -70,12 +70,12 @@ The request body should be a JSON object with the following structure:
 
 **HTTP Status Code**: 400 Bad Request
 
-#### Missing Sub-Tenant ID
+#### Missing Subtenant ID
 
 ```json
 {
   "success": false,
-  "message": "Sub-Tenant ID is required"
+  "message": "Subtenant ID is required"
 }
 ```
 
@@ -141,7 +141,7 @@ curl -X PUT \
   -H 'Content-Type: application/json' \
   -H 'x-partner-id: 123' \
   -H 'x-tenant-id: tenant1' \
-  -H 'x-sub-tenant-id: subtenant1' \
+  -H 'x-subtenant-id: subtenant1' \
   -d '{
   "customer_id": "customer123",
   "disposition_status": "interested"

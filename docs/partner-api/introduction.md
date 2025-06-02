@@ -18,8 +18,8 @@ For all endpoints, you need to provide the following headers unless specified ot
 
 - `x-api-key`: Provided API Key after onboarding (required)
 - `x-api-secret`: Provided API Secret after onboarding (required)
-- `x-tenant-id`: The tenant identifier (required)
-- `x-sub-tenant-id`: The sub-tenant identifier (required)
+- `x-tenant-id`: The tenant identifier for the organization (see [Key Terminology](/intro.md#key-terminology)) (required)
+- `x-subtenant-id`: The subtenant identifier for the specific group/department/team (see [Key Terminology](/intro.md#key-terminology)) (required)
 
 Failure to provide the required headers will result in authentication errors with appropriate HTTP status codes.
 
@@ -68,7 +68,7 @@ To ensure optimal performance for all partners, our APIs implement rate limiting
 
 - 120 requests per minute per partner
 
-If you exceed this limits, you will receive a 429 Too Many Requests response with a Retry-After header indicating when you can resume making requests.
+If you exceed these limits, you will receive 429 Too Many Requests responses with a Retry-After header indicating when you can resume making requests.
 
 ## Available APIs
 
