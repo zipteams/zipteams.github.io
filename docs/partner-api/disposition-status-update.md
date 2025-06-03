@@ -139,7 +139,8 @@ The request body should be a JSON object with the following structure:
 curl -X PUT \
   https://api.zipteams.com/api/v1/partner/ingest/disposition-status \
   -H 'Content-Type: application/json' \
-  -H 'x-partner-id: 123' \
+  -H 'x-api-key: api-key' \
+  -H 'x-api-secret: api-secret' \
   -H 'x-tenant-id: tenant1' \
   -H 'x-subtenant-id: subtenant1' \
   -d '{
