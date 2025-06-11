@@ -29,3 +29,4 @@ https://app.zipteams.com/view-insights?token={auth-token}
 - Each authentication token is unique for a specific tenant and subtenant combination
 - To display dashboards for multiple subtenants within a tenant, you must generate separate authentication tokens for each subtenant
 - Tokens have a limited validity period; refer to the [Auth Token API documentation](./auth-token.md#technical-notes) for details
+- This page can only be opened in IFrame on https webpages and will not open on localhost. Once you have completed the integration, you'll need to get the domain whitelisted from us - then only this page will render otherwise you'll see a refused to connect error.
