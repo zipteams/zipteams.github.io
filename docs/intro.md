@@ -32,6 +32,7 @@ Zipteams offers the following APIs:
 Zipteams offers the following dashboard that can be embedded in your application interface:
 
 - [Customer Insights](/dashboard/customer-insights.md) - Provides AI-powered analytics and insights based on your data
+- [Customer Details](/dashboard/customer-details.md) - Provides an embeddable Customer Details page that offers a comprehensive view of individual customer interactions and AI-powered analysis. This feature-rich page visualizes critical customer information.
 
 ## Support
 

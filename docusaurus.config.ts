@@ -69,21 +69,19 @@ const config: Config = {
     navbar: {
       title: 'ZIPTEAMS',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Zipteams',
         src: 'https://framerusercontent.com/images/I8rooDmB09vlY0QUiBCnpCyDY.png',
       },
-      items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'docs',
-          position: 'left',
-          label: 'APIs',
-        }
-      ],
+      items: [],
     },
     footer: {
       style: 'dark',
-      links: [],
+      links: [
+        {
+          label: 'Support',
+          href: 'https://www.zipteams.com/support'
+        },
+      ],
       copyright: `Copyright © ${new Date().getFullYear()} Zipteams`,
     },
     prism: {
