@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Zipteams API Docs',
+  title: 'Zipteams Integration Docs',
   tagline: 'All Conversations in One Place',
   favicon: 'https://framerusercontent.com/images/I8rooDmB09vlY0QUiBCnpCyDY.png',
 
@@ -23,7 +23,7 @@ const config: Config = {
   organizationName: 'zipteams', // Usually your GitHub org/user name.
   projectName: 'zipteams.github.io', // Usually your repo name.
   trailingSlash: false,
-  deploymentBranch: 'docs',
+  deploymentBranch: 'deployment',
 
   onBrokenLinks: 'warn', // Changed from 'throw' to 'warn' to allow the build to complete
   onBrokenMarkdownLinks: 'warn',

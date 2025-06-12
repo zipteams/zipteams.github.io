@@ -28,7 +28,7 @@ const sidebars: SidebarsConfig = {
       label: 'Embeddable Components',
       items: [
         'dashboard/customer-insights',
-        'dashboard/auth-token',
+        'dashboard/customer-details',
       ],
     },
   ],
