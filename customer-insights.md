@@ -55,6 +55,26 @@ After obtaining the authentication token, you can display the Insights Dashboard
 
 Replace `{auth-token}` with the authentication token you obtained.
 
+#### Theme Support
+
+The Insights Dashboard supports both light and dark themes. You can specify the theme by adding the `theme` parameter to the URL:
+
+```html
+<!-- Example with dark theme -->
+<iframe
+  src="https://app.zipteams.com/view-insights?theme=dark&token={auth-token}"
+  width="100%"
+  height="800px"
+  frameborder="0"
+  allow="autoplay; encrypted-media"
+  allowfullscreen>
+</iframe>
+```
+
+Available theme options:
+- `theme=light` - Light theme (default if no theme is specified)
+- `theme=dark` - Dark theme
+
 ## Technical Notes
 
 - The dashboard requires a valid authentication token. If an invalid token is provided, an error will be displayed.
