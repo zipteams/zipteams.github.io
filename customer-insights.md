@@ -44,36 +44,57 @@ After obtaining the authentication token, you can display the Insights Dashboard
 ```html
 <!-- Example iframe implementation -->
 <iframe
-  src="https://app.zipteams.com/view-insights?token={auth-token}"
-  width="100%"
-  height="800px"
-  frameborder="0"
-  allow="autoplay; encrypted-media"
-  allowfullscreen>
+        src="https://app.zipteams.com/view-insights?token={auth-token}"
+        width="100%"
+        height="800px"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
 </iframe>
 ```
 
 Replace `{auth-token}` with the authentication token you obtained.
 
-#### Theme Support
+#### URL Parameters
 
-The Insights Dashboard supports both light and dark themes. You can specify the theme by adding the `theme` parameter to the URL:
+The Insights Dashboard supports several URL parameters that allow you to customize the dashboard view:
+
+| Parameter | Description | Required | Example |
+|-----------|-------------|----------|---------|
+| `token` | Authentication token for accessing the dashboard | Yes | `token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...` |
+| `theme` | Visual theme for the dashboard | No | `theme=dark` |
+| `agent-id` | Filter dashboard to show data for a specific agent | No | `agent-id=agent123` |
+
+##### Authentication Token
+
+The `token` parameter is required and must contain a valid authentication token obtained from the [Get Auth Token API](./auth-token.md).
+
+##### Theme Support
+
+The Insights Dashboard supports both light and dark themes:
+
+- `theme=light` - Light theme (default if no theme is specified)
+- `theme=dark` - Dark theme
+
+##### Agent-Specific Dashboard
+
+You can filter the dashboard to show data for a specific agent by adding the `agent-id` parameter:
+
+- The agent ID must match the agent ID value passed in the [Batch Call Ingestion API](./../partner-api/batch-call-ingestion.md#agent-object) as the "id" field in the Agent Object
+- This ID is defined in the API documentation as the "Unique identifier for the agent within your system"
+- If an invalid agent ID is provided, the dashboard will show an error
+
+#### Example with Multiple Parameters
 
 ```html
-<!-- Example with dark theme -->
+<!-- Example with dark theme and specific agent -->
 <iframe
-  src="https://app.zipteams.com/view-insights?theme=dark&token={auth-token}"
+  src="https://app.zipteams.com/view-insights?theme=dark&agent-id=agent123&token={auth-token}"
   width="100%"
   height="800px"
-  frameborder="0"
   allow="autoplay; encrypted-media"
   allowfullscreen>
 </iframe>
 ```
-
-Available theme options:
-- `theme=light` - Light theme (default if no theme is specified)
-- `theme=dark` - Dark theme
 
 ## Technical Notes
 
