@@ -19,7 +19,7 @@ For all endpoints, you need to provide the following headers unless specified ot
 - `x-api-key`: Provided API Key after onboarding (required)
 - `x-api-secret`: Provided API Secret after onboarding (required)
 - `x-tenant-id`: The tenant identifier for the organization (see [Key Terminology](/intro.md#key-terminology)) (required)
-- `x-subtenant-id`: The subtenant identifier for the specific group/department/team (see [Key Terminology](/intro.md#key-terminology)) (required)
+- `x-sub-tenant-id`: The subtenant identifier for the specific group/department/team (see [Key Terminology](/intro.md#key-terminology)) (required)
 
 Failure to provide the required headers will result in authentication errors with appropriate HTTP status codes.
 

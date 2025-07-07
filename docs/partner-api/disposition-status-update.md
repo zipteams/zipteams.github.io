@@ -142,7 +142,7 @@ curl -X PUT \
   -H 'x-api-key: api-key' \
   -H 'x-api-secret: api-secret' \
   -H 'x-tenant-id: tenant1' \
-  -H 'x-subtenant-id: subtenant1' \
+  -H 'x-sub-tenant-id: subtenant1' \
   -d '{
   "customer_id": "customer123",
   "disposition_status": "interested"
