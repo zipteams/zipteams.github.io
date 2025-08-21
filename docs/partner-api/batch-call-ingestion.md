@@ -247,7 +247,7 @@ The system will send a JSON payload to the provided `callback_url` with the foll
   "call_id": "call_12345",
   "intent": "INTERESTED",
   "intent_justification": "Customer is interested and exploring technical aspects, integrations, and feature requests, with a focus on webhook functionality, data fields, and potential workarounds. They express a clear need for the product to meet their requirements, indicating a strong interest in utilizing the product, but there is no explicit commitment to purchase.",
-  "quality_score": 42,
+  "intent_score": 42,
   "summary": [
     {
       "chapter_name": "Introduction and Initial Discussion",
@@ -307,17 +307,17 @@ The system will send a JSON payload to the provided `callback_url` with the foll
 
 #### Top-Level Fields
 
-| Field | Type | Description | Required |
-|-------|------|-------------|----------|
-| call_id | string | Unique identifier for the call that was processed. This matches the `id` provided in the original request. Always use this field to correlate the callback with your original request. | Yes |
-| intent | string | The detected intent of the customer during the call (e.g., "INTERESTED", "NOT_INTERESTED", etc.). Use this field to understand the customer's overall interest level. | No |
-| intent_justification | string | A detailed explanation of why the system determined the specific intent. Useful for understanding the reasoning behind the intent classification. | No |
-| quality_score | number | A numerical score (0-100) indicating the overall quality of the call. Higher scores indicate better call quality. Use this for performance tracking. | No |
-| summary | array | An array of chapter objects that summarize different segments of the call. Use this to get a quick overview of the call content without listening to the entire recording. | No |
-| bant | object | BANT (Budget, Authority, Need, Timeline) qualification information extracted from the call. Important for sales qualification processes. | No |
-| qualification | array | An array of qualification objects with labels and answers extracted from the call. Provides structured qualification data that can be used for lead scoring. | No |
-| quality | array | An array of quality assessment objects with justifications, suggestions, and scores. Use this for agent performance evaluation and coaching. | No |
-| meta | object | Metadata about the callback, including the source and timestamp. This contains the same metadata that was provided in the original request. Use this to track the processing source and time. | No |
+| Field                | Type | Description                                                                                                                                                                                                                          | Required |
+|----------------------|------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
+| call_id              | string | Unique identifier for the call that was processed. This matches the `id` provided in the original request. Always use this field to correlate the callback with your original request.                                               | Yes |
+| intent               | string | The detected intent of the customer during the call (e.g., "INTERESTED", "NOT_INTERESTED", etc.). Use this field to understand the customer's overall interest level.                                                                | No |
+| intent_justification | string | A detailed explanation of why the system determined the specific intent. Useful for understanding the reasoning behind the intent classification.                                                                                    | No |
+| intent_score         | number | A numerical score (0-100) based on the buying propensity of the customer. Higher scores indicate how much qualified the prospect is to buy the service/product based on the typical prospects who convert as per past data analysis. | No |
+| summary              | array | An array of chapter objects that summarize different segments of the call. Use this to get a quick overview of the call content without listening to the entire recording.                                                           | No |
+| bant                 | object | BANT (Budget, Authority, Need, Timeline) qualification information extracted from the call. Important for sales qualification processes.                                                                                             | No |
+| qualification        | array | An array of qualification objects with labels and answers extracted from the call. Provides structured qualification data that can be used for lead scoring.                                                                         | No |
+| quality              | array | An array of quality assessment objects with justifications, suggestions, and scores. Use this for agent performance evaluation and coaching.                                                                                         | No |
+| meta                 | object | Metadata about the callback, including the source and timestamp. This contains the same metadata that was provided in the original request. Use this to track the processing source and time.                                        | No |
 
 #### Summary Array Fields
 Each object in the `summary` array contains:
