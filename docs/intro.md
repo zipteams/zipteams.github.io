@@ -11,7 +11,9 @@ Welcome to the Zipteams documentation. This guide provides comprehensive informa
 To get started with the Zipteams API, you'll need to:
 
 1. [Register as a partner](https://zipme.at/zipteams/15-min-product-demo) to receive your API credentials
-2. Review the [Partner API documentation](/partner-api/introduction.md)
+2. Review the documentation for the integration you need:
+   - [Customer API](/customer-api/introduction.md) — if you are a Zipteams customer pushing your own call data into Zipteams
+   - [Partner API](/partner-api/introduction.md) — if you are a partner integrating on behalf of multiple tenants
 3. Implement the integration using our APIs
 
 ## Key Terminology
@@ -25,6 +27,7 @@ Before diving into the technical details, it's important to understand the follo
 
 Zipteams offers the following APIs:
 
+- [Customer APIs](/customer-api/introduction.md) - Push your call recordings and customer status updates into Zipteams, and receive AI analysis back on your own webhooks
 - [Partner APIs](/partner-api/introduction.md) - APIs for partners to integrate with Zipteams
 
 ## Embeddable Dashboards
