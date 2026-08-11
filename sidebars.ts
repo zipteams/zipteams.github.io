@@ -16,6 +16,18 @@ const sidebars: SidebarsConfig = {
     'intro',
     {
       type: 'category',
+      label: 'Customer API',
+      items: [
+        'customer-api/introduction',
+        'customer-api/call-sync',
+        'customer-api/disposition-status-update',
+        'customer-api/call-summary-callback',
+        'customer-api/customer-summary-callback',
+        'customer-api/chrome-extension',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Partner API',
       items: [
         'partner-api/introduction',
