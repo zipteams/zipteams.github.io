@@ -1,17 +1,17 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 ---
 
-# Section 4 — Customer Summary Callback
+# Section 5 — Customer Summary Callback
 
-Where [Section 3](./call-summary-callback.md) tells you about **one call**, this callback tells you about **the contact**.
+Where [Section 4](./call-summary-callback.md) tells you about **one call**, this callback tells you about **the contact**.
 
 It is a flat, CRM-shaped view of where a customer currently stands — their latest intent, their BANT position, their qualification answers, their talking points, keyed by the contact's phone and email rather than by a call id. It is designed to be written straight into a CRM record or an automation tool without much transformation.
 
 ## How to enable it
 
 :::warning This callback is not enabled by default
-Unlike Section 3, sending a `callback_url` does **not** switch this on. It has to be configured for your workspace by Zipteams.
+Unlike Section 4, sending a `callback_url` does **not** switch this on. It has to be configured for your workspace by Zipteams.
 
 **[Contact us](mailto:support@zipteams.com)** to enable it, and tell us:
 
@@ -128,7 +128,7 @@ Mention it when you contact us to enable the callback and we will configure it a
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `qualification` | object | A flat map of `label` → `answer` for each qualification topic that was discussed. **Note the difference from Section 3**, where `qualification` is an *array* of `{ label, answer }` objects. Here it is an object keyed by label, so it drops straight into CRM fields. |
+| `qualification` | object | A flat map of `label` → `answer` for each qualification topic that was discussed. **Note the difference from Section 4**, where `qualification` is an *array* of `{ label, answer }` objects. Here it is an object keyed by label, so it drops straight into CRM fields. |
 | `talking_points` | string | Suggested next-conversation talking points as a single numbered, newline-separated string, ready to paste into a CRM note field. |
 
 ### Your data
@@ -247,9 +247,9 @@ If you use Basic Auth, add `-u "username:password"`.
 
 ---
 
-## Section 3 or Section 4 — which do you need?
+## Section 4 or Section 5 — which do you need?
 
-|  | Section 3 — Call Summary | Section 4 — Customer Summary |
+|  | Section 4 — Call Summary | Section 5 — Customer Summary |
 |--|--------------------------|------------------------------|
 | Granularity | One payload per **call** | One payload per **contact**, refreshed after each of their calls |
 | Enabling | Automatic — just send `callback_url` | **Contact us** to enable |
@@ -265,11 +265,11 @@ If you use Basic Auth, add `-u "username:password"`.
 | Basic auth support | No | Yes |
 | Best for | Call-level QA, coaching dashboards, per-call records | Writing the latest state into a CRM contact or an automation tool |
 
-Most integrations start with **Section 3** and add **Section 4** later when they want contact-level state pushed into a CRM. You can run both at the same time — check the `type` field to tell them apart.
+Most integrations start with **Section 4** and add **Section 5** later when they want contact-level state pushed into a CRM. You can run both at the same time — check the `type` field to tell them apart.
 
 ---
 
 ## Related
 
 - [Section 1 — Call Sync API](./call-sync.md) — where `customer.id` and `metadata` are set
-- [Section 3 — Call Summary Callback](./call-summary-callback.md) — the per-call equivalent, enabled by default
+- [Section 4 — Call Summary Callback](./call-summary-callback.md) — the per-call equivalent, enabled by default

@@ -21,6 +21,7 @@ const sidebars: SidebarsConfig = {
         'customer-api/introduction',
         'customer-api/call-sync',
         'customer-api/disposition-status-update',
+        'customer-api/create-customer',
         'customer-api/call-summary-callback',
         'customer-api/customer-summary-callback',
         'customer-api/chrome-extension',

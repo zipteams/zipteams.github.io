@@ -1,8 +1,8 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 ---
 
-# Section 3 — Call Summary Callback
+# Section 4 — Call Summary Callback
 
 This is the **per-call** analysis Zipteams sends back to you once a recording has finished processing. One call in via [Section 1](./call-sync.md), one callback out.
 
@@ -290,11 +290,11 @@ curl -X POST "$YOUR_CALLBACK_URL" \
 - **Respond `200` fast.** Do your processing after acknowledging. A slow endpoint looks like a failure and triggers retries.
 - **Be idempotent.** Because failed deliveries are retried, your endpoint may see the same `call_id` more than once. Upsert rather than insert.
 - **Use `meta` for correlation.** Anything you put in `metadata` at sync time comes back here untouched. It is the cleanest way to tie the analysis to your own primary key without storing a mapping table.
-- **Check `type`** if you also enable [Section 4](./customer-summary-callback.md) and both post to the same URL. `CALL_SUMMARY` is per call; `CUSTOMER_SUMMARY` is per contact.
+- **Check `type`** if you also enable [Section 5](./customer-summary-callback.md) and both post to the same URL. `CALL_SUMMARY` is per call; `CUSTOMER_SUMMARY` is per contact.
 
 ---
 
 ## Related
 
 - [Section 1 — Call Sync API](./call-sync.md) — where `callback_url` and `metadata` are set
-- [Section 4 — Customer Summary Callback](./customer-summary-callback.md) — the contact-level equivalent
+- [Section 5 — Customer Summary Callback](./customer-summary-callback.md) — the contact-level equivalent
