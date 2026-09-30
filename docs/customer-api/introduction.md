@@ -8,16 +8,21 @@ The **Customer API** is how you push your own call data into Zipteams and get AI
 
 You send us a call recording plus a small amount of context (who the agent was, who the customer was). Zipteams transcribes the recording, runs its AI analysis, and — if you ask for it — posts the results back to a URL you control.
 
-There are **four things** to understand, and they are documented one per page:
+There are **five things** to understand, and they are documented one per page:
 
 | # | Section | Direction | Purpose |
 |---|---------|-----------|---------|
 | 1 | [Call Sync API](./call-sync.md) | You → Zipteams | Send a call recording + context so Zipteams can analyse it |
 | 2 | [Disposition Status Update API](./disposition-status-update.md) | You → Zipteams | Update a customer's status / custom fields **without** sending a call |
-| 3 | [Call Summary Callback](./call-summary-callback.md) | Zipteams → You | Per-call AI analysis, posted back to your `callback_url` |
-| 4 | [Customer Summary Callback](./customer-summary-callback.md) | Zipteams → You | Contact-level rollup of AI analysis, posted back to your URL |
+| 3 | [Create Customer API](./create-customer.md) | You → Zipteams | Create (or update) a customer directly — no call, no prior sync required |
+| 4 | [Call Summary Callback](./call-summary-callback.md) | Zipteams → You | Per-call AI analysis, posted back to your `callback_url` |
+| 5 | [Customer Summary Callback](./customer-summary-callback.md) | Zipteams → You | Contact-level rollup of AI analysis, posted back to your URL |
 
-Sections **1 and 2** are APIs you call. Sections **3 and 4** are webhooks we call.
+Sections **1, 2 and 3** are APIs you call. Sections **4 and 5** are webhooks we call.
+
+:::note Section 3 uses a different endpoint
+Sections 1 and 2 share one endpoint (below). [Section 3 — Create Customer API](./create-customer.md) is a separate, newer endpoint with its own request shape and its own error responses — see that page for details. The `x-zip-api-key` header and [step 1 below](#1-add-your-agents-to-zipteams) still apply to it, but its `custom_fields` are a **different system** from step 2 — see [Section 3](./create-customer.md#custom_fields-array--optional) for how to set those up.
+:::
 
 Separately, and optional: the [Chrome Extension](./chrome-extension.md) can surface a contact's insights inside your own web interface. It needs no API key and is not part of the four sections above.
 

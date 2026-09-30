@@ -375,7 +375,7 @@ For error responses, see [Responses](./introduction.md#responses) in the overvie
 3. The customer is matched by `customer.email` or `call.phone_number`, or created if there is no match.
 4. `customer.id` is stored as the customer's CRM id, `disposition_status` is recorded, and `custom_fields` are saved against the call.
 5. The recording is fetched — using the whitelisted IP if `access_type` is `whitelisted_ip` — then transcribed and analysed.
-6. If `callback_url` was provided, the results are posted to it. See [Section 3](./call-summary-callback.md).
+6. If `callback_url` was provided, the results are posted to it. See [Section 4](./call-summary-callback.md).
 
 If the call does not appear in Zipteams, work through [Why a call did not sync](./introduction.md#why-a-call-did-not-sync).
 
@@ -384,5 +384,6 @@ If the call does not appear in Zipteams, work through [Why a call did not sync](
 ## Related
 
 - [Section 2 — Disposition Status Update API](./disposition-status-update.md) — update a status without sending a call
-- [Section 3 — Call Summary Callback](./call-summary-callback.md) — the analysis you get back for this call
-- [Section 4 — Customer Summary Callback](./customer-summary-callback.md) — contact-level rollup
+- [Section 3 — Create Customer API](./create-customer.md) — create (or update) a customer directly, without a call
+- [Section 4 — Call Summary Callback](./call-summary-callback.md) — the analysis you get back for this call
+- [Section 5 — Customer Summary Callback](./customer-summary-callback.md) — contact-level rollup

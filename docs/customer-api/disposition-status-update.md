@@ -12,7 +12,8 @@ This API does **not** create anything. It only updates a customer who is already
 
 :::info When to use which API
 - The status came from **a call you are also sending us** → put it in `customer.disposition_status` in [Section 1](./call-sync.md). Do not call this API separately.
-- The status changed **independently of a call** → use this API.
+- The status changed **independently of a call**, and the customer **already exists** in Zipteams → use this API.
+- The status changed **independently of a call**, and the customer **may not exist yet** → use [Section 3 — Create Customer API](./create-customer.md) instead. It creates the customer if needed and updates the status either way.
 :::
 
 ## Endpoint
@@ -295,4 +296,5 @@ For error responses, see [Responses](./introduction.md#responses) in the overvie
 ## Related
 
 - [Section 1 — Call Sync API](./call-sync.md) — must run at least once per customer before status updates will match
-- [Section 4 — Customer Summary Callback](./customer-summary-callback.md) — contact-level rollup pushed back to you
+- [Section 3 — Create Customer API](./create-customer.md) — creates the customer if they don't exist yet, and can set the status and custom fields in the same call
+- [Section 5 — Customer Summary Callback](./customer-summary-callback.md) — contact-level rollup pushed back to you
